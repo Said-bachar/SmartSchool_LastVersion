@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="787.0" style="-fx-background-color: linear-gradient(to bottom left,  #04619f, #4062bb);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ensa.SmartSchool.controller.StudentAdminController">
+   <children>
+   
+      <VBox alignment="TOP_CENTER" layoutX="94.0" layoutY="280.0" prefHeight="241.0" prefWidth="100.0" spacing="20.0">
+         <children>
+          <Label text="Student ID:" textFill="WHITE" />
+            <Label text="Fisrt Name:" textFill="WHITE" />
+            <Label text="Last Name:" textFill="WHITE" />
+            <Label text="Date Of Birth:" textFill="WHITE" />
+            <Label prefHeight="17.0" prefWidth="44.0" text="email:" textFill="WHITE" />
+            <Label text="password:" textFill="WHITE" />
+            <Label text="phone number:" textFill="WHITE" />
+            <Label text="attempts:" textFill="WHITE" />
+         </children>
+      </VBox>
+      <VBox layoutX="245.0" layoutY="283.0" prefHeight="241.0" prefWidth="149.0" spacing="10.0">
+         <children>
+          <TextField fx:id="studentId" />
+            <TextField fx:id="firstName" />
+            <TextField fx:id="lastName" />
+            <DatePicker fx:id="dateOfBirth" />
+            <TextField fx:id="email" />
+            <TextField fx:id="password" />
+            <TextField fx:id="phoneNumber" />
+            <TextField fx:id="attempts" />
+         </children>
+      </VBox>
+      <TableView fx:id="studentsList" layoutX="68.0" layoutY="25.0" onMouseClicked="#populateFields" prefHeight="241.0" prefWidth="689.0">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="75.0" text="student id" />
+          <TableColumn fx:id="colFirstName" prefWidth="75.0" text="first name" />
+            <TableColumn fx:id="colLastName" prefWidth="75.0" text="last name" />
+            <TableColumn fx:id="colDateOfBirth" prefWidth="87.0" text="date of birth" />
+            <TableColumn fx:id="colEmail" prefWidth="128.0" text="email" />
+            <TableColumn fx:id="colPassword" prefWidth="73.0" text="password" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="85.0" text="phone number" />
+            <TableColumn fx:id="colAttempts" prefWidth="90.0" text="attempts" />
+          
+        </columns>
+      </TableView>
+      <Pane layoutY="-3.0" prefHeight="586.0" prefWidth="44.0" style="-fx-background-color: #00154f;">
+         <children>
+            <Pane prefHeight="42.0" prefWidth="44.0" style="-fx-background-color: #ff4007;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="25.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/icons8_s_128px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutY="79.0" prefHeight="42.0" prefWidth="44.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="6.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/icons8_home_48px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="234.0" onMouseClicked="#goNotices" prefHeight="42.0" prefWidth="44.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/icons8_courses_52px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="-8.0" layoutY="285.0" onMouseClicked="#goDocuments" prefHeight="42.0" prefWidth="44.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/icons8_inscription_60px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="192.0" onMouseClicked="#goCourses" prefHeight="42.0" prefWidth="44.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/file_double%20%5B%231715%5D.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutY="137.0" onMouseClicked="#goForum" prefHeight="30.0" prefWidth="44.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/icons8_Topic_Push_Notification_100px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="4.0" layoutY="327.0" prefHeight="38.0" prefWidth="30.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../static/PNG@2_white_icons/messages_chat%20%5B%231557%5D.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="557.0" layoutY="302.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="177.0" layoutX="31.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static/PNG@2_white_icons/icons8_admin_settings_male_240px.png" />
+               </image></ImageView>
+         </children>
+      </Pane>
+      <VBox alignment="CENTER" layoutX="431.0" layoutY="296.0" prefHeight="213.0" prefWidth="113.0" spacing="15.0">
+         <children>
+            <Button fx:id="insertBtn" mnemonicParsing="false" onAction="#insertStudent" prefHeight="38.0" prefWidth="113.0" style="-fx-background-color: #f2c222;" text="INSERT" textFill="WHITE" />
+            <Button fx:id="updateBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateStudent" prefHeight="38.0" prefWidth="113.0" style="-fx-background-color: #00154f;" text="UPDATE" textFill="WHITE" />
+            <Button fx:id="deleteBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="34.0" prefWidth="113.0" style="-fx-background-color: #f04008;" text="DELETE" textFill="WHITE" />
+         </children>
+      </VBox>
+     
+      
+      
+   </children>
+</AnchorPane>
